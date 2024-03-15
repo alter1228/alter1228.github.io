@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>alter_index</title>
+    <link rel="icon" href="./img/index.png" type="image/x-icon"> <!--在网页标题左侧显示图标-->
+    <link rel="shortcut icon" href="./img/index.png" type="image/x-icon"> <!--在收藏夹显示图标-->
+    <script src='./js_index.js'></script>
+    <link rel="stylesheet" href="./style_index.css">
+
+    <!--    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
+    <!--    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>-->
+    <!--    <py-env>-->
+    <!--        - requests-->
+    <!--    </py-env>-->
+    <!-- background="D:\Pictures\Saved Pictures\8k\微信图片_20190701134733.jpg" -->
+
+<body>
+    <!-- 页眉 -->
+    <div id='header' class="header">
+        <div id='title'>Index/</div>
+        <div id='datetime' onload=myDate()> </div>
+    </div>
+    <!-- 页面内容 -->
+    <div id='body'>
+        <!-- 间隔空白  留白-->
+        <div id="body_bar" style="height:0.4em; width:100%;"></div>
+        <!-- 左侧边  -->
+        <div id="body_left" style="float:left; height:2.8em; width:40% ;">
+            <!-- 搜索 -->
+            <div id='search_bar'>
+                <form id="engine" name="engine" action="https://cn.bing.com/search?" target="_blank">
+                    <!-- 搜索引擎选项 -->
+                    <select id="engine_list" name="engine" onchange="changeEngine();">
+                        <option value="bing" selected>Bing</option>
+                        <option value="baidu">baidu</option>
+                        <option value="bilibili">bilibili</option>
+                        <option value="douyin">douyin</option>
+                        <option value="gitee">Gitee</option>
+                        <option value="tbox">Tbox</option>
+                        <option value="google">Google</option>
+                        <option value="Yandex">Yandex</option>
+                        <option value="fsoufsou">Fsoufsou</option>
+                    </select>
+                    <!-- 搜索栏-->
+                    <input type="search" id='searchenter' placeholder="" name="q" autofocus="autofocus" style=" float:left ;" />
+                </form>
+            </div>
+            <!-- 留白 -->
+            <div id="body_bar" style="float: left; height:2em; width:100%;"></div>
+            <!-- 快捷标签 -->
+            <div id="linkbar">
+                <div class="link">
+                    <a href="http://192.168.0.155" target="_blank" title="hainasi">
+                        <img src="http://192.168.0.155/favicon.ico" alt="hainasi" width="40" height="40"></a>
+                </div>
+                <div class="link">
+                    <a href="https://warframe.market/zh-hans/" target="_blank" title="wiki_market">
+                        <img src="https://warframe.market/static/assets/user/default-avatar.png" alt="wiki_market"
+                            width="40" height="40"></a>
+                </div>
+                <!-- <div class="link">
+                    <a href="https://overframe.gg/" target="_blank" title="overframe">
+                        <img src="https://static.overframe.gg/static/images/logos/logo-64.png" alt="overframe"
+                            width="40" height="40"></a>
+                </div> -->                
+                <!-- <div class="link">
+                    <a href="https://warframe.huijiwiki.com/wiki/Mainpage" target="_blank" title="wiki_warframe">
+                        <img src="https://av.huijiwiki.com/site_avatar_warframe_l.png?1700197450" alt="wiki_warframe"
+                            width="40" height="40"></a>
+                </div> -->
+            </div>
+        </div>
+        <!-- 右侧边 -->
+        <div id="body_right" style="float:right; height:auto; width:60% ; ">
+            <!-- 开放地图状态 -->
+            <div style="float:left;background-color: cornsilk;" id="wfstate_Plains_Eidolon" onload="state_Plains_Eidolon();"></div>
+            <div style="float:left;background-color: rgb(179, 217, 248);" id="wfstate_orb_vallis" onload="state_orb_vallis();"></div>
+            <div style="float:left;background-color: rgb(201, 165, 165);" id="wfstate_cambion_drift" onload="state_cambion_drift();"></div>
+            <!-- 留白 -->
+            <div id="body_bar" style="float: left;clear:both;  height:1em; width:100%;"></div>
+            <!-- warframe_wiki搜索栏-->
+            <form id = 'action_wiki' action="https://warframe.huijiwiki.com/index.php?profile=default" target="_blank" method="post" style="width: 100%; " autocomplete="off">
+                <div style=" width: auto;height: auto;float: left; padding-top: 0.15em;">wiki&nbsp</div>
+                <input id = 'wiki_in' type="search" name="search" placeholder="" style="width: 60%;height: 2em;outline: none; float: left;font-size: 14px;"/>
+            </form>
+            <!-- 留白 -->
+            <div id="body_bar" style="float: left;clear:both;  height:1em; width:100%;"></div>
+            <!-- warframe_wiki搜索栏-->
+            <form id = 'action_wiki' action="https://overframe.gg/search/?" target="_blank" method="get" style="width: 100%;" autocomplete="off">
+                <div style=" width: auto;height: auto;float: left; padding-top: 0.15em;">conf&nbsp</div>
+                <input id = 'wiki_in' type="search" name="q" placeholder="" style="width: 60%;height: 2em;outline: none; float: left;font-size: 14px;"/>
+            </form>
+
+
+            <!-- 世界状态 -->
+            <div id=" wf_time"></div>
+            <script type="text/javascript" src = 'http:192.168.0.155:8001'></script>
+            
+            
+        </div>
+
+
+
+    </div>
+    <!-- 页脚 -->
+    <!-- <div id='footer'>
+        <div id='title'>Index/</div>
+        <div id='datetime' onload=myDate()> </div>
+    </div> -->
+
+</body>
+
+</html>
