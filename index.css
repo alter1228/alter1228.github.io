@@ -116,11 +116,13 @@ body {
         grid-area: 2 / 7 / 10 / 11;
         /* border-left: 2px solid rgb(196, 196, 196); */
         padding-left: 10px;
+        padding-right: 10px;
     }
         /* 标签样式 */
         .tab{
             overflow: hidden;
-            /* background-color: #ffffff; */
+            /* background-color: #7a4f4f; */
+            display: flex;
         }
         
         /* 为选项卡内的按钮设置样式 */
@@ -129,10 +131,10 @@ body {
             border: none;
             outline: none;
             text-align: center;
-            /* transition: 0.3s; */
-            background-color: rgb(255, 255, 255);
+            justify-content: flex-start;
+            background-color: white;
             font-size: 17px;
-            width:80px ;
+            width:100px ;
             height: 25px;
             
         }

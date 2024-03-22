@@ -7,7 +7,7 @@ function myDate() {
     let weekd = date.toDateString().split(" ")[0];
     document.getElementById("datetime").innerHTML = time + "\t" + today + "\t" + weekd;
 }
-setInterval(myDate, 500);
+setInterval(myDate, 100);
 //搜索引擎的选择
 function changeEngine() {
     let engine_select;
@@ -134,29 +134,9 @@ function autoChange() {
     }
 }
 
-// 今日诗词API
+// 今日诗词API 需要引入外部js
 jinrishici.load(function (result) {
-    var sentence = document.querySelector("#poem_sentence")
-    var info = document.querySelector("#poem_info")
-    sentence.innerHTML = '「 ' + result.data.content + '」' + "———— " + result.data.origin.dynasty + "·" + result.data.origin.author + ' ⟪' + result.data.origin.title + '⟫'
-    // info.innerHTML ="———— " + result.data.origin.dynasty + "·" + result.data.origin.author + ' ⟪' + result.data.origin.title + '⟫'
+    document.getElementById("poem_sentence").innerHTML = '「 ' + result.data.content + '」' + "———— " + result.data.origin.dynasty + "·" + result.data.origin.author + ' ⟪' + result.data.origin.title + '⟫';
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

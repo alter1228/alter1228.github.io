@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="index.css">
     <!-- 引用js 今日诗词API-->
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8" ></script>  
-    <script src="index.js"></script>
+    
     <title>alter_index</title>
 </head>
 
@@ -86,20 +86,20 @@
         <div class="div4">
             <!-- 选项卡 -->
             <div class="tab" id = "tab">
-                <button class="tablinks current" >London</button>
-                <button class="tablinks" >Paris</button>
-                <button class="tablinks" >Nanjing</button>
+                <button class="tablinks current" >column_1</button>
+                <button class="tablinks" >column_2</button>
+                <button class="tablinks" >column_3</button>
             </div>
             <!-- 选项卡内容 -->
             <div class="tab_con" id="tab_con">
                 <div class="tabcontent current" >
-                    
+                    <span>content</span>
                 </div>
                 <div class="tabcontent">
-                    <p>巴黎</p>
+                    <span>content</span>
                 </div>
                 <div class="tabcontent">
-                    <p>南京</p>
+                    <span>content</span>
                 </div>
             </div>
             
@@ -107,10 +107,10 @@
         <!-- 尾栏 -->
         <div class="div5">
             <!-- 今日诗词API -->
-            <div id="poem_sentence"></div>
-            <!-- <div id="poem_info"></div> -->
+            <span id="poem_sentence" onload="poemAutochange()" class="poem">正在加载今日诗词···</span>
+            <!-- <span id="ip" class="ip">IP获取中···</span> -->
         </div>
-    
+    <script src="index.js"></script>
 </body>
 
  
