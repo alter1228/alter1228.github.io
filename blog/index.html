@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta charset="UTF-8">
     <title>Blog</title>
-    <link rel="icon" href="./img/index.png" type="image/x-icon"> <!--在网页标题左侧显示图标-->
-    <link rel="shortcut icon" href="./img/index.png" type="image/x-icon"> <!--在收藏夹显示图标-->
+    <link rel="icon" href="./img/writeblog.png" type="image/x-icon"> <!--在网页标题左侧显示图标-->
+    <link rel="shortcut icon" href="./img/writeblog.png" type="image/x-icon"> <!--在收藏夹显示图标-->
     <link rel="stylesheet" href="blog.css">
     <!-- md >> html -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -13,7 +12,17 @@
 </head>
 <body>
     <div class="parent">
-        
+        <!-- Blog -->
+        <div class="div1">
+            <div id='title'>Blog/</div>
+        </div>
+        <!-- 左侧目录 & 大纲 -->
+        <div class="div2">
+        </div>
+        <!-- 内容 -->
+        <div class="div3" id = "content" onload="mdtohtml()" >
+        </div>
     </div>
+    <script src="blog.js"></script>
 </body>
 </html>
