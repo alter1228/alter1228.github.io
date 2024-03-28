@@ -1,0 +1,31 @@
+html {
+    height:100%;
+    font-family: Consolas, '微软雅黑', monospace;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden; /*取消垂直外边距合并 高度占据整个页面 不会出现垂直滑动条*/
+}
+body {
+    height:100%;
+    cursor: url(),auto;
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    margin: 0;
+}
+.parent {
+    /* position:absolute; */
+    border: none;  /* 无边框 */
+    padding: 0.5em;
+    width: auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 50px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 35px;;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+    /* 标题栏 */
+    .div1 {
+        grid-area: 1 / 1 / 2 / 11;
+        /* border-bottom: 2px solid rgb(196, 196, 196); */
+    }
